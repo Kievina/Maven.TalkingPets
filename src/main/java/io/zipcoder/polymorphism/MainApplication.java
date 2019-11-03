@@ -22,16 +22,19 @@ public class MainApplication {
         Integer numberOfPets = input.nextInt();
 
         for (int i = 0; i < numberOfPets; i++) {
-            String petType = getPetType();
+            String petType = getPetType().toLowerCase();
             String petName = getPetName();
             if (petType.equals("dog")) {
-                Pet pet = new Dog(petName, petType);
+                Pet pet = new Dog(petName);
                 listOfPets.add(pet);
             } else if (petType.equals("cat")) {
-                Pet pet = new Cat(petName, petType);
+                Pet pet = new Cat(petName);
+                listOfPets.add(pet);
+            } else if (petType.equals("bear")) {
+                Pet pet = new Bear(petName);
                 listOfPets.add(pet);
             } else {
-                Pet pet = new Bear(petName, petType);
+                Pet pet = new Pet(petName);
                 listOfPets.add(pet);
             }
         }

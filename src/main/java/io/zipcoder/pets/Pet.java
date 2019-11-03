@@ -4,6 +4,9 @@ public class Pet {
     private String name;
     private String type;
 
+    public Pet(String name) {
+        this.name = name;
+    }
     public Pet(String name, String type) {
         this.name = name;
         this.type = type;
