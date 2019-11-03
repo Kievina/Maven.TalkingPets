@@ -1,7 +1,7 @@
 package io.zipcoder.pets;
 
-public class Bear extends Pet {
-    public Bear(String name) {
+public class Rabbit extends Pet {
+    public Rabbit(String name) {
         super(name);
     }
 

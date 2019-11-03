@@ -1,12 +1,11 @@
 package io.zipcoder.polymorphism;
 
-import io.zipcoder.pets.Bear;
+import io.zipcoder.pets.Rabbit;
 import io.zipcoder.pets.Cat;
 import io.zipcoder.pets.Dog;
 import io.zipcoder.pets.Pet;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -31,7 +30,7 @@ public class MainApplication {
                 Pet pet = new Cat(petName);
                 listOfPets.add(pet);
             } else if (petType.equals("bear")) {
-                Pet pet = new Bear(petName);
+                Pet pet = new Rabbit(petName);
                 listOfPets.add(pet);
             } else {
                 Pet pet = new Pet(petName);
