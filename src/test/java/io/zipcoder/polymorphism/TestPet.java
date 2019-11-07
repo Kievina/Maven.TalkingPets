@@ -1,34 +1,28 @@
 package io.zipcoder.polymorphism;
 
-public class Pet {
-    private String name;
-    private String type;
+import io.zipcoder.pets.Pet;
+import org.junit.Assert;
+import org.junit.Test;
 
-    public Pet(String name) {
-        this.name = name;
-    }
-    public Pet(String name, String type) {
-        this.name = name;
-        this.type = type;
-    }
+public class TestPet {
 
-    public String speak() {
-        return null;
-    }
+    @Test
+    public void TestCatConstructor(){
+        Pet pet = new Pet("Henry");
 
-    public String getName() {
-        return name;
-    }
+        String expected = "Henry";
+        String actual = pet.getName();
 
-    public void setName(String name) {
-        this.name = name;
+        Assert.assertEquals(expected,actual);
     }
+    @Test
+    public void TestCatSpeak(){
+        Pet pet = new Pet("Henry");
 
-    public String getType() {
-        return type;
-    }
+        String expected = null;
+        String actual = pet.speak();
 
-    public void setType(String type) {
-        this.type = type;
+        Assert.assertEquals(expected,actual);
     }
 }
+
